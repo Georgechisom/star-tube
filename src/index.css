@@ -65,10 +65,29 @@ a {
     .category-btn {
         margin: 10px;
     }
+    .biggs{
+        width: 50%;
+        padding: 2px 2px;
+        justify-content: space-between;
+    }
+    .search-bar {
+        width: 50%;
+        border: none;
+    }
+    .searcIco{
+        padding: 0 !important;
+    }
 }
 
 @media screen and (max-width: 800px) {
     .copyright {
         margin: 1px;
+    }
+    .biggs{
+        width: 50%;
+    }
+    .search-bar{
+        width: 40%;
+        border: none;
     }
 }
