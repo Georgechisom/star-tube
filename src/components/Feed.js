@@ -6,9 +6,11 @@ import { apiData } from '../assets/apiData';
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory ] = useState('New');
+  const [videos, setVideos] = useState([]);
 
   useEffect(() => {
     apiData(`search?part=snippet&q=${selectedCategory}`)
+    .then((data) => setVideos(data.items))
   }, [selectedCategory]);
   
   return (
@@ -29,7 +31,7 @@ const Feed = () => {
           <span style={{ color: '#F31503', fontSize: "35px", marginLeft: "4px" }}>Videos</span>
         </Typography>
 
-        <Video videos={[]} />
+        <Video videos={videos} />
       </Box>
     </Stack>
   )
