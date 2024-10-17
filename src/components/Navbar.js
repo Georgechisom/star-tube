@@ -13,9 +13,9 @@ const Navbar = () => (
     >
         <Link 
             to="/"
-            style={{ display:'flex', alignItems: "center" }}
+            style={{ display:'flex', alignItems: "center", fontWeight: "bold", color: "#fdb602" }}
         >
-            <img src={logo} alt="logo" height={45} />
+            <img src={logo} alt="logo" height={45} />  StarTube 
         </Link>
         <SearchBar />
     </Stack>
