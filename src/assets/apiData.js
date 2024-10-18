@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://youtube-v31.p.rapidapi.com/search';
+const API_URL = 'https://youtube-v31.p.rapidapi.com';
 
 const options = {
     params: {
@@ -16,6 +16,6 @@ export const apiData = async (url) => {
     const { data } = await axios.get(`${API_URL}/${url}`,options);
 
     return data;
-    console.log(data);
-    
 }
+
+// /search?relatedToVideoId=7ghhRHRP6t4&part=id%2Csnippet&type=video&maxResults=50

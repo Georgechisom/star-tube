@@ -8,10 +8,10 @@ const Feed = () => {
   const [selectedCategory, setSelectedCategory ] = useState('New');
   const [videos, setVideos] = useState([]);
 
-  // useEffect(() => {
-  //   apiData(`search?part=snippet&q=${selectedCategory}`)
-  //   .then((data) => setVideos(data.items))
-  // }, []);
+  useEffect(() => {
+    apiData(`search?part=snippet&q=${selectedCategory}`)
+    .then((data) => setVideos(data.items))
+  }, [selectedCategory]);
   
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row"} }}>
@@ -28,13 +28,13 @@ const Feed = () => {
         </Typography>
 
         <Video videos={videos} />
-      </Box>
 
-      {/* <Box sx={{ flexDirection: { sx: "column", md: "column"} }}>
-        <Typography className="copyright" variant="body2" sx={{ mt: 1.5, color: "green" }}>
-          CopyRight 2024 Winsome media
-        </Typography>
-      </Box> */}
+        <Box sx={{ flexDirection: { sx: "column", md: "column"} }}>
+          <Typography className="copyright" variant="body2" sx={{ mt: 1.5, color: "green", textAlign: "center", fontWeight: "bold" }}>
+            CopyRight 2024 Winsome media
+          </Typography>
+        </Box>
+      </Box>
     </Stack>
   )
 }

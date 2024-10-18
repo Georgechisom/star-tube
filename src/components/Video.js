@@ -3,7 +3,7 @@ import VideoCard from './VideoCard';
 import ChannelCard from './ChannelCard';
 
 const Video = ({ videos }) => {
-    console.log(videos);
+    // console.log(videos);
     
   return (
     <Stack
